@@ -31,6 +31,7 @@
           background-color:transparent;
           border: 1px solid white;
           border-radius: 5px;
+
         }
         .button:hover
         {
@@ -44,6 +45,13 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
+        }
+        .Btn_con
+        {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            gap: 50px;
         }
     </style>
 </head>
@@ -73,6 +81,7 @@
             }
             const imgelemnt = document.getElementById('img');
             imgelemnt.src = imgaes[imgagesIndex];
+        
         }
 
         function Next() {
@@ -84,6 +93,7 @@
             const imgelemnt = document.getElementById('img');
             imgelemnt.src = imgaes[imgagesIndex];
         }
+        // setInterval(Next, 2000);
     </script>
 </body>
 </html>
