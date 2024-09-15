@@ -5,56 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Gallery</title>
     <style>
+        .body{
+            background-color: rgb(41, 41, 41);
+        }
          .Gallery
         {
-            height:650px;
-            width:400px;
+            height:500px;
+            width:320px;
             object-fit: cover;
             display: block;
-            margin: 20px auto;
-            background-color: black;
+            margin: 0px auto;
+            border: 1px solid grey;
+            border-radius: 15px;
         }
-        .Btn_con
+        .button
+        {
+        margin-top: 20px;
+          border: none;
+          height: 40px;
+          width: 100px;
+          padding: 10px;
+          color:orangered;
+          font-weight: 800;
+          font-family: 'Times New Roman', Times, serif;
+          background-color:transparent;
+          border: 1px solid orangered;
+          border-radius: 5px;
+
+
+        }
+        .parentdiv
         {
             display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 450px;
-            border: none;
-            border-radius: 10px;
-        
-            
-            margin-top: -350px;
+            flex-direction: column;
         }
+        
        
     </style>
 </head>
-<body>
+<body class="body">
     <h1 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;">Rupesh Mandge</h1>
-    <img src="./imgaes/IMG_6219.JPG" class="Gallery">
+    <div class=" parentdiv">
+
+   <img src="./imgaes/IMG_6219.JPG" id="img" class="Gallery">
     <div class="Btn_con">
-    <button type="button" onclick="Previous">
+    <button class="button" type="button" onclick="Previous">
         Previous
     </button>
-    <button type="button" onclick="Next">
+    <button class="button" type="button" onclick="Next">
         Next
     </button>
+
+</div>
 </div>
 
     <script>
-        const imgaes = ["./imgaes/IMG_3530.HEIC","./imgaes/IMG_6219.JPG"];
-        let imgIndex = 0;
+        const imgaes = ["./imgaes/IMG_3530.HEIC","./imgaes/IMG_1782.JPG"];
+        let imgagesIndex = 0;
     
         function Previous()
         {
+            if (imgIndex > 0)
+        {
+            imgIndex--;
+        }
+       
+        const imgelemnt =  document.getElementById('img')
+        imgelemnt.src= imgaes[imgIndex]
 
         }
         function Next()
         {
-
+            if(imgIndex < imgaes.length-1)
+        {
+            imgIndex = 0;
         }
-
-
-       
+        else
+        {
+            imgIndex++;
+        }
+        const imgelemnt =  document.getElementById('img')
+        imgelemnt.src = imgaes[imgIndex]
+        }
 
     </script>
 </body>
