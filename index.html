@@ -37,7 +37,6 @@
             color: black;
             background-color: antiquewhite;
             cursor: pointer;
-
         }
         .parentdiv
         {
@@ -46,59 +45,45 @@
             justify-content: center;
             flex-direction: column;
         }
-
-       
     </style>
 </head>
 <body class="body">
     <h1 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; color: antiquewhite;">Rupesh &nbsp; Mandge</h1>
-    <div class=" parentdiv">
-
-   <img src="./imgaes/IMG_6219.JPG" id="img" class="Gallery">
-    <div class="Btn_con">
-    <button class="button" type="button" onclick="Previous()">
-        Previous
-    </button>
-    <button class="button" type="button" onclick="Next()">
-        Next
-    </button>
-
-</div>
-</div>
+    <div class="parentdiv">
+        <img src="./imgaes/IMG_6219.JPG" id="img" class="Gallery">
+        <div class="Btn_con">
+            <button class="button" type="button" onclick="Previous()">
+                Previous
+            </button>
+            <button class="button" type="button" onclick="Next()">
+                Next
+            </button>
+        </div>
+    </div>
 
     <script>
-        const imgaes = ["./imgaes/IMG_3530.HEIC","./imgaes/IMG_1782.JPG","./imgaes/koreanRamen.png","./imgaes/maggieClassic.png","./imgaes/maggieCuppa.png","./imgaes/yippeeNoodles.png"];
+        const imgaes = [ "./imgaes/IMG_1782.JPG","./imgaes/img2.jpeg","./imgaes/IMG_8261.JPG","./imgaes/IMG_8284.JPG","./imgaes/img1.jpeg","./imgaes/img.jpeg","./imgaes/IMG_8511.JPG"];
         let imgagesIndex = 0;
     
-        function Previous()
-        {
-        if ( imgagesIndex== 0)
-        {
-            imgagesIndex= imgaes.length -1;
-        }
-        else
-        {
-            imgagesIndex--;
-        }
-       
-        const imgelemnt =  document.getElementById('img')
-        imgelemnt.src= imgaesArr[imgIndex]
-
-        }
-        function Next()
-        {
-            if( imgagesIndex < imgaes.length-1)
-        {
-            imgagesIndex = 0;
-        }
-        else
-        {
-            imgagesIndex++;
-        }
-        const imgelemnt =  document.getElementById('img')
-        imgelemnt.src = imgaesArr[ imgagesIndex]
+        function Previous() {
+            if (imgagesIndex == 0) {
+                imgagesIndex = imgaes.length - 1;
+            } else {
+                imgagesIndex--;
+            }
+            const imgelemnt = document.getElementById('img');
+            imgelemnt.src = imgaes[imgagesIndex];
         }
 
+        function Next() {
+            if (imgagesIndex == imgaes.length - 1) {
+                imgagesIndex = 0;
+            } else {
+                imgagesIndex++;
+            }
+            const imgelemnt = document.getElementById('img');
+            imgelemnt.src = imgaes[imgagesIndex];
+        }
     </script>
 </body>
 </html>
