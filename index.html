@@ -67,14 +67,14 @@
 </div>
 
     <script>
-        const imgaes = ["./imgaes/IMG_3530.HEIC","./imgaes/IMG_1782.JPG"];
+        const imgaes = ["./imgaes/IMG_3530.HEIC","./imgaes/IMG_1782.JPG","./imgaes/koreanRamen.png","./imgaes/maggieClassic.png","./imgaes/maggieCuppa.png","./imgaes/yippeeNoodles.png"];
         let imgagesIndex = 0;
     
         function Previous()
         {
-            if (imgIndex > 0)
+            if (imgIndex == 0)
         {
-            imgIndex--;
+            imgIndex = imgaes.length-1;
         }
        
         const imgelemnt =  document.getElementById('img')
