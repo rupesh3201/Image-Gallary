@@ -56,10 +56,10 @@
 
    <img src="./imgaes/IMG_6219.JPG" id="img" class="Gallery">
     <div class="Btn_con">
-    <button class="button" type="button" onclick="Previous">
+    <button class="button" type="button" onclick="Previous()">
         Previous
     </button>
-    <button class="button" type="button" onclick="Next">
+    <button class="button" type="button" onclick="Next()">
         Next
     </button>
 
@@ -72,27 +72,31 @@
     
         function Previous()
         {
-            if (imgIndex == 0)
+        if ( imgagesIndex== 0)
         {
-            imgIndex = imgaes.length-1;
+            imgagesIndex= imgaes.length -1;
+        }
+        else
+        {
+            imgagesIndex--;
         }
        
         const imgelemnt =  document.getElementById('img')
-        imgelemnt.src= imgaes[imgIndex]
+        imgelemnt.src= imgaesArr[imgIndex]
 
         }
         function Next()
         {
-            if(imgIndex < imgaes.length-1)
+            if( imgagesIndex < imgaes.length-1)
         {
-            imgIndex = 0;
+            imgagesIndex = 0;
         }
         else
         {
-            imgIndex++;
+            imgagesIndex++;
         }
         const imgelemnt =  document.getElementById('img')
-        imgelemnt.src = imgaes[imgIndex]
+        imgelemnt.src = imgaesArr[ imgagesIndex]
         }
 
     </script>
